@@ -34,3 +34,12 @@ Essentially, it works this way:
 
 The script will then cycle through every retroarch.cfg file in each system and change the directories for your cores' save and savestates folder to the child folders you created earlier.
 
+**Theme support**
+This is the code I've added to the Switch theme.xml file for adding profile images:
+
+		<image name="user" extra="true">
+            <path>/home/pi/RetroPie/profiles/photos/current.png</path>
+            <size>0.075 0.137</size>
+			<pos>0.025 0.03</pos>
+    </image>
+
