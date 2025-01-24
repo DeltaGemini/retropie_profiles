@@ -8,7 +8,7 @@ I'm trying to get my kid into retro games with the Retropie which is all good an
 
 But what if there was an easier way?
 
-**INTRODUCING** Player Profiles!
+## INTRODUCING Player Profiles!
 
 This is pretty barebones, but this will create a new "system" in EmulationStation where instead of games, you have player profiles you can switch to.
 
@@ -18,16 +18,17 @@ Essentially, it works this way:
 1) In your save and savestate folders, create a subfolder for each player profile. Remember the name you used, this is your profile name.
 2) Add a Profile Switcher system to es_systems.cfg:
 
-  <system>
-      <name>profile_switcher</name>
-      <fullname>Profile Switcher</fullname>
-      <path>/opt/retropie/configs/all/emulationstation/scripts/profiles</path>
-      <extension>.sh .SH</extension>
-      <command>%ROM%</command>
-      <platform>profile_switcher</platform>
-      <theme>profile_switcher</theme>
-  </system>
-
+ ```xml
+<system>
+	<name>profile_switcher</name>
+	<fullname>Profile Switcher</fullname>
+	<path>/opt/retropie/configs/all/emulationstation/scripts/profiles</path>
+	<extension>.sh .SH</extension>
+	<command>%ROM%</command>
+	<platform>profile_switcher</platform>
+	<theme>profile_switcher</theme>
+</system>
+ ```
 3) Create the folder "profiles" in /opt/retropie/configs/all/emulationstation/scripts/
 4) In this folder, put the "Guest.sh" script from this repository. Duplicate and rename this script to your chosen user profile name. Inside the file, change the folder names and profile names to match your chosen save folder.
 5) SSH into your Retropie. We need to turn this .sh file into a executable script. Do this by:
@@ -37,12 +38,12 @@ Essentially, it works this way:
 
 The script will then cycle through every retroarch.cfg file in each system and change the directories for your cores' save and savestates folder to the child folders you created earlier.
 
-**Theme support**
+## Theme support
 This is the code I've added to the Switch theme.xml file for adding profile images:
-
-		<image name="user" extra="true">
-            <path>/home/pi/RetroPie/profiles/photos/current.png</path>
-            <size>0.075 0.137</size>
-			<pos>0.025 0.03</pos>
-    </image>
-
+ ```xml
+<image name="user" extra="true">
+	<path>/home/pi/RetroPie/profiles/photos/current.png</path>
+	<size>0.075 0.137</size>
+	<pos>0.025 0.03</pos>
+</image>
+ ```
