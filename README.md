@@ -47,3 +47,6 @@ This is the code I've added to the Switch theme.xml file for adding profile imag
 	<pos>0.025 0.03</pos>
 </image>
  ```
+
+## Please note
+This is very experimental and I take no responsibility for any loss or damage to your data. I made something cool for myself and wanted to share it, that's all!
