@@ -1,4 +1,7 @@
 # Retropie User Profiles
+
+![RetropieProfiles](https://github.com/user-attachments/assets/4f4f69af-7912-4c02-bff5-10795e53e7ea)
+
 Create player profiles for Retropie and Emulationstation
 
 I'm trying to get my kid into retro games with the Retropie which is all good and fun until they want to save their progress. Now I have to manually rename save files, backup save states etc etc etc.
